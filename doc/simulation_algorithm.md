@@ -15,6 +15,8 @@ To emulate fault injections and bit flips, we will use intel's [Pin Instrumentat
 - Do we want to bit flip all bits in a register or just some significant ones? Which would those be?
 - How do we defend agains RIP modifications? Should we double it in a second register or something? Stack variables? Is it dangerous?
 
+For now, we will try to generate a summary of the instructions included in a binary, and then perform injections based off of that.
+
 ## Implementative Considerations
 - Instrumentation code is typically called only once for every instruction, while the analysis code is called everytime the instruction is executed.
 - Injection before an instruction should be done only to the registers it uses.
