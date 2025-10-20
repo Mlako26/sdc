@@ -1,0 +1,97 @@
+Function: _init
+  ADD: 1
+  JZ: 1
+  MOV: 1
+  NOP: 1
+  RET_NEAR: 1
+  SUB: 1
+  TEST: 1
+
+Function: .plt.got
+  JMP: 1
+  NOP: 1
+
+Function: _start
+  AND: 1
+  CALL_NEAR: 1
+  LEA: 1
+  MOV: 2
+  NOP: 1
+  POP: 1
+  PUSH: 2
+  XOR: 3
+
+Function: deregister_tm_clones
+  CMP: 1
+  JZ: 1
+  LEA: 2
+  RET_NEAR: 1
+
+Function: register_tm_clones
+  ADD: 1
+  JZ: 1
+  LEA: 2
+  MOV: 1
+  RET_NEAR: 1
+  SAR: 2
+  SHR: 1
+  SUB: 1
+
+Function: __do_global_dtors_aux
+  CALL_NEAR: 2
+  CMP: 2
+  JNZ: 1
+  JZ: 1
+  MOV: 3
+  NOP: 1
+  POP: 1
+  PUSH: 1
+  RET_NEAR: 1
+
+Function: frame_dummy
+  JMP: 1
+  NOP: 1
+
+Function: _Z9aFunctionii
+  ADD: 1
+  MOV: 5
+  NOP: 1
+  POP: 1
+  PUSH: 1
+  RET_NEAR: 1
+
+Function: main
+  CALL_NEAR: 1
+  LEAVE: 1
+  MOV: 5
+  NOP: 1
+  PUSH: 1
+  RET_NEAR: 1
+  SUB: 1
+
+Function: _fini
+  ADD: 1
+  NOP: 1
+  RET_NEAR: 1
+  SUB: 1
+
+Global opcode counts:
+ADD,4
+AND,1
+CALL_NEAR,4
+CMP,3
+JMP,2
+JNZ,1
+JZ,4
+LEA,5
+LEAVE,1
+MOV,17
+NOP,8
+POP,3
+PUSH,5
+RET_NEAR,7
+SAR,2
+SHR,1
+SUB,4
+TEST,1
+XOR,3
